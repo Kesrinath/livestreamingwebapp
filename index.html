@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay src=""></video>
+    </div>
+    <div class="action-container">
+        <div class="record-btn-container">
+            <div class="record-btn "></div>
+        </div>
+        <div class="capture-btn-container">
+            <div class="capture-btn btn"></div>
+        </div>
+        <div class="timer-container">
+            <div class="timer">00:00:00</div>
+        </div>
+    </div>
+    <div class="filter-container">
+        <div class="filter red"></div>
+        <div class="filter yellow"></div>
+        <div class="filter green"></div>
+        <div class="filter blue"></div>
+        <div class="filter transparent"></div>
+    </div>
+    <div class="filter-layer"></div>
+    <div class="recordingPage">
+        Go to Recordings....
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+    <script src="indexdb.js"></script>
+    <script src="index.js"></script>
+    <script>
+        let recording = document.querySelector(".recordingPage");
+        recording.addEventListener('click', function () {
+            location.assign("./recording.html")
+        })
+    </script>
+</body>
+
+</html>

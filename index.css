@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.video-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+video {
+  width: 100%;
+  height: 100%;
+}
+
+.action-container {
+  position: absolute;
+  color: white;
+  height: 13rem;
+  width: 5rem;
+  top: 15rem;
+  right: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+.record-btn-container {
+  height: 5rem;
+  width: 100%;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+.record-btn {
+  background-color: red;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin: 12px;
+  cursor: pointer;
+}
+.capture-btn-container {
+  height: 5rem;
+  width: 100%;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+.capture-btn {
+  background-color: white;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+.Btn-anim {
+  animation-name: Btn-anim;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes Btn-anim {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.Capture-anim {
+  animation-name: Btn-anim;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes Btn-anim {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+.timer {
+  color: red;
+  font-size: 25px;
+}
+
+.filter-container {
+  height: 20.6rem;
+  width: 5rem;
+  background-color: white;
+  position: absolute;
+  top: 15rem;
+  left: 3rem;
+  z-index: 2;
+}
+.filter {
+  height: 4rem;
+  cursor: pointer;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3TyjA5Jruu0CpQdh7is8eiRzRO0RJxkiHow&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: cover;
+  border: 1px solid black;
+  background-blend-mode: color-burn;
+  margin-bottom: 2px;
+}
+.filter:hover {
+  transform: translateY(1px);
+}
+.red {
+  background-color: rgba(191, 3, 3, 0.366);
+}
+.blue {
+  background-color: rgb(0, 0, 233, 0.42);
+}
+.green {
+  background-color: rgb(0, 128, 0, 0.467);
+}
+.yellow {
+  background-color: rgba(211, 211, 4, 0.351);
+}
+.transparent {
+  background-color: transparent;
+}
+.filter-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  z-index: 1;
+}
+.recordingPage {
+  font-size: 34px;
+  position: absolute;
+  bottom: 10rem;
+  right: 30rem;
+  color: blue;
+  cursor: pointer;
+  z-index: 2;
+}
+.recordingPage:hover {
+  color: white;
+}
